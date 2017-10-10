@@ -4,7 +4,7 @@ ServerQL
 
 [![Build Status](https://travis-ci.org/vikoperdomo/serverql.svg?branch=master)](https://travis-ci.org/vikoperdomo/serverql)
 
-[![Coverage Status](https://coveralls.io/repos/github/vikoperdomo/serverless/badge.svg?branch=master)](https://coveralls.io/github/vikoperdomo/serverless?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/vikoperdomo/serverql/badge.svg)](https://coveralls.io/github/vikoperdomo/serverql)
 
 
 Module to start a projects using serverless, graphQL and AWS
