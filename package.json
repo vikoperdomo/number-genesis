@@ -2,10 +2,21 @@
   "name": "serverql",
   "version": "0.1.4",
   "description": "Module to start a projects using serverless, graphQL and AWS",
+  "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter nyan",
-    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*"
+    "precommit": "lint-staged",
+    "lint": "eslint app-backend/*.js app-client/src/**/*.js",
+    "prettier":
+      "prettier --write \"{app-backend,app-client/src}/**/*.{js,css,json}\"",
+    "prettier-check":
+      "prettier --list-different \"{app-backend,app-client/src}/**/*.{js,css,json}\"",
+    "test": "mocha --reporter nyan && yarn run lint && yarn run prettier-check",
+    "cover":
+      "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*"
+  },
+  "lint-staged": {
+    "*.{js,json,css}": ["prettier --write", "git add"]
   },
   "engines": {
     "node": ">=4.2.4"
@@ -14,13 +25,7 @@
     "type": "git",
     "url": "git+https://github.com/vikoperdomo/serverql.git"
   },
-  "keywords": [
-    "Serverless",
-    "NodeJS",
-    "GraphQL",
-    "Lambda",
-    "AWS"
-  ],
+  "keywords": ["Serverless", "NodeJS", "GraphQL", "Lambda", "AWS"],
   "author": "“Viktor <“vikoperdomo@gmail.com”>",
   "license": "MIT",
   "bugs": {
@@ -28,9 +33,21 @@
   },
   "homepage": "https://github.com/vikoperdomo/serverql#readme",
   "devDependencies": {
+    "babel-eslint": "^8.0.1",
     "chai": "^4.1.2",
     "coveralls": "^3.0.0",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb": "^16.0.0",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jest": "^21.2.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-react": "^7.4.0",
+    "husky": "^0.14.3",
     "istanbul": "^0.4.5",
-    "mocha": "^4.0.1"
+    "lint-staged": "^4.2.3",
+    "mocha": "^4.0.1",
+    "prettier": "1.7.4"
   }
 }

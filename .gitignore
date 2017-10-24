@@ -1,3 +1,5 @@
+.DS_Store
+
 # Logs
 logs
 *.log
@@ -53,6 +55,15 @@ typings/
 
 # Yarn Integrity file
 .yarn-integrity
+
+# serverless zip
+.serverless
+
+# webpack build files
+.webpack
+
+# vim
+*.swp
 
 # dotenv environment variables file
 .env

@@ -1,5 +1,5 @@
 language: node_js
-
+cache: yarn
 node_js:
   - stable
 
@@ -8,6 +8,13 @@ install:
 
 script:
   - npm run cover
+  - cd app-backend && yarn && yarn run test
+  - cd ../app-client && yarn && yarn run test
+  - cd ../ && yarn && yarn run test
+
+notifications:
+  email: false
+
 
 # Send coverage data to Coveralls
 after_script: "cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js"
