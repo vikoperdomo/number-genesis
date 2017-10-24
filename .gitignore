@@ -1,4 +1,11 @@
+# OS generated files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+ehthumbs.db
+Icon?
+Thumbs.db
 
 # Logs
 logs
@@ -10,7 +17,6 @@ yarn-error.log*
 # Yarn lock &  NPM lock .json
 yarn.lock
 package-lock.json 
-
 
 # Runtime data
 pids
@@ -66,6 +72,9 @@ typings/
 
 # webpack build files
 .webpack
+
+# Babel ES6 compiles files
+dist
 
 # vim
 *.swp
