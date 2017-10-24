@@ -1,8 +1,8 @@
 {
   "name": "serverql",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Module to start a projects using serverless, graphQL and AWS",
-  "private": true,
+  "private": false,
   "main": "index.js",
   "scripts": {
     "precommit": "lint-staged",
