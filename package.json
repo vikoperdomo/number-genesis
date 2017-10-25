@@ -11,7 +11,7 @@
       "prettier --write \"{app-backend,app-client/src}/**/*.{js,css,json}\"",
     "prettier-check":
       "prettier --list-different \"{app-backend,app-client/src}/**/*.{js,css,json}\"",
-    "test": "mocha --reporter nyan && yarn run lint && yarn run prettier-check",
+    "test": "mocha --reporter nyan",
     "cover":
       "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*"
   },
