@@ -1,6 +1,6 @@
 {
   "name": "serverql",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Module to start a projects using serverless, graphQL and AWS",
   "private": false,
   "main": "index.js",
